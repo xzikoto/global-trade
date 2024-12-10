@@ -2,7 +2,7 @@
   "name": "globaltrade",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://xzikoto.github.io/global-trade",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
