@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #F2B705;
+  --secondary: #4CAF50;
+  --text-primary: #2E2419;
+  --background: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply m-0 text-text-primary bg-background;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-sunflower-500 to-leaf-500;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold mb-4;
+  }
+
+  @keyframes float-smooth {
+    0%, 100% { 
+      transform: translateY(0) rotate(0); 
+      filter: brightness(1);
+    }
+    50% { 
+      transform: translateY(-10px) rotate(2deg); 
+      filter: brightness(1.1);
+    }
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-primary text-white px-6 py-3 rounded-lg 
+           transition-all duration-300 ease-out hover:bg-opacity-90 
+           before:absolute before:inset-0 before:bg-white before:opacity-20 
+           before:translate-x-[-100%] hover:before:translate-x-[100%] 
+           before:transition-transform before:duration-500 before:ease-out;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300
+           border border-gray-100 overflow-hidden hover:border-gray-300;
+  }
+
+  .section {
+    @apply py-16 md:py-24 relative overflow-hidden;
+  }
+
+  .section::before {
+    @apply content-[''] absolute inset-0 bg-grain opacity-50;
+  }
+
+  .testimonials-slider {
+    @apply pb-12;
+  }
+
+  .testimonials-slider .swiper-pagination-bullet {
+    @apply bg-primary;
+  }
+
+  .testimonials-slider .swiper-button-next,
+  .testimonials-slider .swiper-button-prev {
+    @apply text-primary after:text-2xl;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 
+           shadow-[0_8px_32px_rgba(0,0,0,0.12)] rounded-2xl;
+  }
+
+  .organic-border {
+    clip-path: polygon(
+      50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+      32% 100%, 6% 78%, 0% 43%, 17% 12%
+    );
+  }
+
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .image-overlay {
+    @apply absolute inset-0 bg-black/40 transition-opacity duration-300 
+           group-hover:bg-black/20;
+  }
+
+  .grain-overlay {
+    @apply absolute inset-0 bg-[url('/images/grain-texture.png')] 
+           opacity-20 mix-blend-overlay pointer-events-none;
+  }
+
+  .feature-card {
+    @apply relative overflow-hidden rounded-2xl transition-all duration-300
+           hover:shadow-lg hover:shadow-accent-500/10;
+  }
+
+  .feature-icon-wrapper {
+    @apply relative rounded-2xl p-4 transition-transform duration-300
+           before:absolute before:inset-0 before:rounded-2xl
+           before:shadow-[inset_0_0_20px_rgba(0,0,0,0.05)]
+           before:transition-opacity before:opacity-0
+           group-hover:before:opacity-100;
+  }
+}
+
+/* Custom animations */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sunflower-500 to-leaf-500;
+}
