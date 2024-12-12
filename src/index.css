@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --primary: #F2B705;
-  --secondary: #4CAF50;
-  --text-primary: #2E2419;
-  --background: #FFFFFF;
+  --primary: #f2b705;
+  --secondary: #4caf50;
+  --text-primary: #2e2419;
+  --background: #ffffff;
 }
 
 @layer base {
   body {
     @apply m-0 text-text-primary bg-background;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
   }
 
   h1 {
@@ -24,19 +24,25 @@
   }
 
   @keyframes float-smooth {
-    0%, 100% { 
-      transform: translateY(0) rotate(0); 
+    0%,
+    100% {
+      transform: translateY(0) rotate(0);
       filter: brightness(1);
     }
-    50% { 
-      transform: translateY(-10px) rotate(2deg); 
+    50% {
+      transform: translateY(-10px) rotate(2deg);
       filter: brightness(1.1);
     }
   }
 
   @keyframes pulse-subtle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -86,8 +92,15 @@
 
   .organic-border {
     clip-path: polygon(
-      50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
-      32% 100%, 6% 78%, 0% 43%, 17% 12%
+      50% 0%,
+      83% 12%,
+      100% 43%,
+      94% 78%,
+      68% 100%,
+      32% 100%,
+      6% 78%,
+      0% 43%,
+      17% 12%
     );
   }
 
@@ -105,7 +118,7 @@
   }
 
   .grain-overlay {
-    @apply absolute inset-0 bg-[url('/images/grain-texture.png')] 
+    @apply absolute inset-0 bg-[url('https://snapstackstorageaccount.blob.core.windows.net/templates/grain-texture.png?sp=r&st=2024-12-12T13:36:44Z&se=2024-12-12T21:36:44Z&sv=2022-11-02&sr=b&sig=j4qdi%2BuI2cuzGr3KKCz24m%2F13cjhyVmoEu9mbfMJxbI%3D')] 
            opacity-20 mix-blend-overlay pointer-events-none;
   }
 

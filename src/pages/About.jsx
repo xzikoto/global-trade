@@ -67,7 +67,7 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent" />
         </div>
-        
+
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -77,8 +77,8 @@ export default function About() {
           >
             <h1 className="text-5xl font-bold mb-6">За GlobalTrade</h1>
             <p className="text-xl text-white/90">
-              Повече от 15 години доставяме качествени масла на световните пазари,
-              изграждайки доверие и партньорства.
+              Повече от 15 години доставяме качествени масла на световните
+              пазари, изграждайки доверие и партньорства.
             </p>
           </motion.div>
         </div>
@@ -96,9 +96,9 @@ export default function About() {
               <h2 className="text-3xl font-bold mb-6">Нашата история</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 GlobalTrade �� основана през 2008 година с мисията да предоставя
-                висококачествени хранителни масла на международните пазари. Днес сме
-                горди да бъдем един от водещите доставчици в индустрията, обслужващ
-                клиенти в над 50 държави.
+                висококачествени хранителни масла на международните пазари. Днес
+                сме горди да бъдем един от водещите доставчици в индустрията,
+                обслужващ клиенти в над 50 държави.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -113,7 +113,7 @@ export default function About() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -121,7 +121,7 @@ export default function About() {
               className="relative"
             >
               <img
-                src="/images/facility.jpg"
+                src="https://snapstackstorageaccount.blob.core.windows.net/templates/facility.jpg?sp=r&st=2024-12-12T13:39:35Z&se=2024-12-12T21:39:35Z&sv=2022-11-02&sr=b&sig=qm14pY9TilTjh8b9fAZph6hoijR09EXzlDlYVWXWKC8%3D"
                 alt="Our facility"
                 className="rounded-2xl shadow-2xl"
               />
@@ -163,7 +163,9 @@ export default function About() {
       {/* Values Section */}
       <section className="py-24">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-16">Нашите ценности</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">
+            Нашите ценности
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -181,7 +183,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      
     </div>
   );
 }

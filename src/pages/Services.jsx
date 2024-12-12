@@ -1,32 +1,39 @@
 import { motion } from "framer-motion";
-import { BeakerIcon, TruckIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
+import {
+  BeakerIcon,
+  TruckIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Services() {
   const services = [
     {
       title: "Слънчогледово масло",
-      description: "Внос и износ на рафинирано и нерафинирано слънчогледово масло с най-високо качество.",
+      description:
+        "Внос и износ на рафинирано и нерафинирано слънчогледово масло с най-високо качество.",
       features: [
         "Рафинирано и нерафинирано",
         "Bulk опаковки",
         "Сертифицирано качество",
-        "Конкурентни цени"
+        "Конкурентни цени",
       ],
       icon: BeakerIcon,
-      image: `${process.env.PUBLIC_URL}/images/sunflower-oil-bg.jpg`
+      image:
+        "https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-12T13:38:40Z&se=2024-12-12T21:38:40Z&sv=2022-11-02&sr=b&sig=a2R0WR2JWmrSh6ObV7pZYm0moVmllkW2XffDo2SzLVU%3D",
     },
     {
       title: "Соево масло",
-      description: "Търговия с висококачествено ��оево масло за хранителната индустрия.",
+      description:
+        "Търговия с висококачествено соево масло за хранителната индустрия.",
       features: [
         "Индустриални доставки",
         "Гарантиран произход",
         "Лабораторно тествано",
-        "Бързи доставки"
+        "Бързи доставки",
       ],
       icon: ShieldCheckIcon,
-      image: `${process.env.PUBLIC_URL}/images/soybean-oil-bg.jpg`
-    }
+      image: "/images/soybean-oil-bg.jpg",
+    },
   ];
 
   return (
@@ -34,7 +41,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sunflower-50/50 via-white to-leaf-50/30" />
-        
+
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -62,15 +69,21 @@ export default function Services() {
                 transition={{ delay: index * 0.2 }}
                 className="group relative"
               >
-                <div className="glass-card p-8 border-2 border-gray-100 hover:border-sunflower-200 
-                               transition-all duration-300 h-full relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-sunflower-50 to-white 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+                <div
+                  className="glass-card p-8 border-2 border-gray-100 hover:border-sunflower-200 
+                               transition-all duration-300 h-full relative overflow-hidden"
+                >
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-sunflower-50 to-white 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
                   <div className="relative z-10">
-                    <div className="w-16 h-16 bg-sunflower-100 text-sunflower-600 
+                    <div
+                      className="w-16 h-16 bg-sunflower-100 text-sunflower-600 
                                   rounded-2xl p-4 mb-6 transform group-hover:scale-110 
-                                  group-hover:rotate-3 transition-all duration-300">
+                                  group-hover:rotate-3 transition-all duration-300"
+                    >
                       <service.icon className="w-full h-full" />
                     </div>
 
@@ -87,9 +100,11 @@ export default function Services() {
                     </ul>
                   </div>
 
-                  <div className="absolute -right-8 -bottom-8 w-32 h-32 
+                  <div
+                    className="absolute -right-8 -bottom-8 w-32 h-32 
                                 bg-sunflower-100 rounded-full opacity-20 
-                                group-hover:scale-150 transition-transform duration-500" />
+                                group-hover:scale-150 transition-transform duration-500"
+                  />
                 </div>
               </motion.div>
             ))}
