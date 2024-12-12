@@ -112,7 +112,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-bg.jpg"
+            src={`${process.env.PUBLIC_URL}/images/hero-bg.jpg`}
             alt="Sunflower field"
             className="w-full h-full object-cover object-center"
           />
@@ -410,7 +410,7 @@ export default function Home() {
               Нашите продукти
               <div className="absolute -top-8 -right-8 w-16 h-16 animate-spin-slow opacity-20">
                 <img
-                  src="/images/sunflower-oil.png"
+                  src={`${process.env.PUBLIC_URL}/images/sunflower-oil.png`}
                   alt=""
                   className="w-full h-full object-contain"
                 />
@@ -518,7 +518,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/cta-bg.jpg"
+            src={`${process.env.PUBLIC_URL}/images/cta-bg.jpg`}
             alt="Background"
             className="w-full h-full object-cover"
           />
