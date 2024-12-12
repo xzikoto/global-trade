@@ -20,7 +20,7 @@ export function Navbar() {
   }, []);
 
   const navItems = [
-    { path: "/", label: t("nav.home") },
+    { path: "/home", label: t("nav.home") },
     { path: "/about", label: t("nav.about") },
     { path: "/services", label: t("nav.services") },
     { path: "/contact", label: t("nav.contact") },
@@ -39,7 +39,7 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link 
-            to="/" 
+            to="/home" 
             className="relative group flex items-center space-x-2"
           >
             <div className="w-10 h-10 bg-sunflower-500 rounded-lg flex items-center justify-center

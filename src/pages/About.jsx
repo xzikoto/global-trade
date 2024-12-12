@@ -61,7 +61,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="/images/about-hero.jpg"
+            src="https://snapstackstorageaccount.blob.core.windows.net/templates/about-hero.jpg?sp=r&st=2024-12-12T13:43:14Z&se=2024-12-12T21:43:14Z&sv=2022-11-02&sr=b&sig=Jk%2BOAswxb1m%2F0flHO4ijGNqa5kQCvdbFwrvj6ky%2F%2Ba8%3D"
             alt="Company headquarters"
             className="w-full h-full object-cover"
           />
