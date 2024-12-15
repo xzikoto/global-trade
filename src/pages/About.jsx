@@ -61,7 +61,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://snapstackstorageaccount.blob.core.windows.net/templates/about-hero.jpg?sp=r&st=2024-12-12T13:43:14Z&se=2024-12-12T21:43:14Z&sv=2022-11-02&sr=b&sig=Jk%2BOAswxb1m%2F0flHO4ijGNqa5kQCvdbFwrvj6ky%2F%2Ba8%3D"
+            src="https://snapstackstorageaccount.blob.core.windows.net/templates/about-hero.jpg?sp=r&st=2024-12-15T17:19:40Z&se=2024-12-16T01:19:40Z&sv=2022-11-02&sr=b&sig=31Kq2q1NVuB6vsqVCQs10vWmVwwjr83oFDXz%2FW%2FEovY%3D"
             alt="Company headquarters"
             className="w-full h-full object-cover"
           />
@@ -121,7 +121,7 @@ export default function About() {
               className="relative"
             >
               <img
-                src="https://snapstackstorageaccount.blob.core.windows.net/templates/facility.jpg?sp=r&st=2024-12-12T13:39:35Z&se=2024-12-12T21:39:35Z&sv=2022-11-02&sr=b&sig=qm14pY9TilTjh8b9fAZph6hoijR09EXzlDlYVWXWKC8%3D"
+                src="https://snapstackstorageaccount.blob.core.windows.net/templates/facility.jpg?sp=r&st=2024-12-15T17:21:18Z&se=2024-12-16T01:21:18Z&sv=2022-11-02&sr=b&sig=lj2L5W9QBJUBfzTsZa8CbUMTHkDOhIdJdJF8avBBFgg%3D"
                 alt="Our facility"
                 className="rounded-2xl shadow-2xl"
               />

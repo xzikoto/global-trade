@@ -112,7 +112,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://snapstackstorageaccount.blob.core.windows.net/templates/hero-bg.jpg?sp=r&st=2024-12-12T13:37:15Z&se=2024-12-12T21:37:15Z&sv=2022-11-02&sr=b&sig=iByqvmaiuIp%2FOM8wYaqRLse0ERZf1eFD3XtxVay6vbo%3D"
+            src="https://snapstackstorageaccount.blob.core.windows.net/templates/hero-bg.jpg?sp=r&st=2024-12-15T17:22:19Z&se=2024-12-16T01:22:19Z&sv=2022-11-02&sr=b&sig=RAvMzq0Wj%2F8HYYWHiGeBbgGGTGFGhLL4qy5CIvNp5oI%3D"
             alt="Sunflower field"
             className="w-full h-full object-cover object-center"
           />
@@ -410,7 +410,7 @@ export default function Home() {
               Нашите продукти
               <div className="absolute -top-8 -right-8 w-16 h-16 animate-spin-slow opacity-20">
                 <img
-                  src="https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-12T13:38:40Z&se=2024-12-12T21:38:40Z&sv=2022-11-02&sr=b&sig=a2R0WR2JWmrSh6ObV7pZYm0moVmllkW2XffDo2SzLVU%3D"
+                  src="https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-15T17:23:52Z&se=2024-12-16T01:23:52Z&sv=2022-11-02&sr=b&sig=Ag9MUboj6TXpdi3XXKu2vnkcRwwlQwEkjI%2BluVE7gYs%3D"
                   alt=""
                   className="w-full h-full object-contain"
                 />
@@ -424,7 +424,7 @@ export default function Home() {
                 title: "Слънчогледово масло",
                 description: "Рафинирано и нерафинирано",
                 features: ["Висока чистота", "Златист цвят", "Приятен аромат"],
-                icon: "https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-12T13:38:40Z&se=2024-12-12T21:38:40Z&sv=2022-11-02&sr=b&sig=a2R0WR2JWmrSh6ObV7pZYm0moVmllkW2XffDo2SzLVU%3D",
+                icon: "https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-15T17:23:52Z&se=2024-12-16T01:23:52Z&sv=2022-11-02&sr=b&sig=Ag9MUboj6TXpdi3XXKu2vnkcRwwlQwEkjI%2BluVE7gYs%3D",
                 gradient: "from-sunflower-light to-sunflower-dark",
               },
               {
@@ -435,7 +435,7 @@ export default function Home() {
                   "Светъл цвят",
                   "Неутрален вкус",
                 ],
-                icon: "https://snapstackstorageaccount.blob.core.windows.net/templates/soy-oil.png?sp=r&st=2024-12-12T13:38:15Z&se=2024-12-12T21:38:15Z&sv=2022-11-02&sr=b&sig=FMxs6QHxXL1balbxYql%2FWOa4bbSjUeXsC6MS8jGHm1k%3D",
+                icon: "https://snapstackstorageaccount.blob.core.windows.net/templates/soy-oil.png?sp=r&st=2024-12-15T17:23:40Z&se=2024-12-16T01:23:40Z&sv=2022-11-02&sr=b&sig=O3RqI96VUjl3ozxzdUW81oRE5SVssYCdsoPYeOOAcTk%3D",
                 gradient: "from-leaf-100 to-leaf-300",
               },
             ].map((product, index) => (
@@ -498,7 +498,7 @@ export default function Home() {
       {/* Add floating images */}
       <div className="absolute -right-20 top-20 w-64 h-64 animate-float-smooth opacity-20">
         <img
-          src="https://snapstackstorageaccount.blob.core.windows.net/templates/oil-drop.png?sp=r&st=2024-12-12T13:37:36Z&se=2024-12-12T21:37:36Z&sv=2022-11-02&sr=b&sig=7w2fr69q%2FvFJnTJYAeu5QZSDidd0Bg6uENJqACOxVO8%3D"
+          src="https://snapstackstorageaccount.blob.core.windows.net/templates/oil-drop.png?sp=r&st=2024-12-15T17:22:34Z&se=2024-12-16T01:22:34Z&sv=2022-11-02&sr=b&sig=X9XFvah2ps5dB42WDkzLgKPRlB5lBbULxF226QncR%2BY%3D"
           alt="Oil drop"
           className="w-full h-full object-contain"
         />
@@ -508,7 +508,7 @@ export default function Home() {
         style={{ animationDelay: "1s" }}
       >
         <img
-          src="https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower.png?sp=r&st=2024-12-12T13:39:17Z&se=2024-12-12T21:39:17Z&sv=2022-11-02&sr=b&sig=zudAHAN6c74FhOc7iqKSLMhwRck1dggUqq8fN6PE2rA%3D"
+          src="https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower.png?sp=r&st=2024-12-15T17:24:49Z&se=2024-12-16T01:24:49Z&sv=2022-11-02&sr=b&sig=oBELE5JwqeMP9nXelIpzj0x8ZSpy11VfjCU1H%2FR%2F9Zk%3D"
           alt="Sunflower"
           className="w-full h-full object-contain"
         />
@@ -518,7 +518,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/cta-bg.jpg"
+            src="https://snapstackstorageaccount.blob.core.windows.net/templates/cta-bg.jpg?sp=r&st=2024-12-15T17:20:13Z&se=2024-12-16T01:20:13Z&sv=2022-11-02&sr=b&sig=vladGfG30kApc8b1HbM6CfXoSTOlK0LIpjZcQ8FCd6o%3D"
             alt="Background"
             className="w-full h-full object-cover"
           />

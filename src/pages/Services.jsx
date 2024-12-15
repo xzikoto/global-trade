@@ -19,7 +19,7 @@ export default function Services() {
       ],
       icon: BeakerIcon,
       image:
-        "https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-12T13:38:40Z&se=2024-12-12T21:38:40Z&sv=2022-11-02&sr=b&sig=a2R0WR2JWmrSh6ObV7pZYm0moVmllkW2XffDo2SzLVU%3D",
+        "https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-15T17:23:52Z&se=2024-12-16T01:23:52Z&sv=2022-11-02&sr=b&sig=Ag9MUboj6TXpdi3XXKu2vnkcRwwlQwEkjI%2BluVE7gYs%3D",
     },
     {
       title: "Соево масло",
