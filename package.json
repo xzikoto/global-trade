@@ -1,5 +1,5 @@
 {
-  "name": "globaltrade",
+  "name": "global-trade",
   "private": true,
   "version": "0.0.0",
   "homepage": "https://xzikoto.github.io/global-trade",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "framer-motion": "^11.13.5",
+    "framer-motion": "^11.15.0",
     "i18next": "^24.0.5",
     "i18next-browser-languagedetector": "^8.0.2",
     "i18next-http-backend": "^3.0.1",

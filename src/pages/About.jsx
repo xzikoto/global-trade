@@ -7,6 +7,7 @@ import {
   TrophyIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import { getAssetPath } from '../utils/assetHelper';
 
 export default function About() {
   const timeline = [
@@ -61,7 +62,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://snapstackstorageaccount.blob.core.windows.net/templates/about-hero.jpg?sp=r&st=2024-12-15T17:19:40Z&se=2024-12-16T01:19:40Z&sv=2022-11-02&sr=b&sig=31Kq2q1NVuB6vsqVCQs10vWmVwwjr83oFDXz%2FW%2FEovY%3D"
+            src={getAssetPath('/images/about-hero.jpg')}
             alt="Company headquarters"
             className="w-full h-full object-cover"
           />
@@ -121,7 +122,7 @@ export default function About() {
               className="relative"
             >
               <img
-                src="https://snapstackstorageaccount.blob.core.windows.net/templates/facility.jpg?sp=r&st=2024-12-15T17:21:18Z&se=2024-12-16T01:21:18Z&sv=2022-11-02&sr=b&sig=lj2L5W9QBJUBfzTsZa8CbUMTHkDOhIdJdJF8avBBFgg%3D"
+                src={getAssetPath('/images/facility.jpg')}
                 alt="Our facility"
                 className="rounded-2xl shadow-2xl"
               />

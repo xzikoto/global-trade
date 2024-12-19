@@ -4,6 +4,7 @@ import {
   TruckIcon,
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
+import { getAssetPath } from '../utils/assetHelper';
 
 export default function Services() {
   const services = [
@@ -18,8 +19,7 @@ export default function Services() {
         "Конкурентни цени",
       ],
       icon: BeakerIcon,
-      image:
-        "https://snapstackstorageaccount.blob.core.windows.net/templates/sunflower-oil.png?sp=r&st=2024-12-15T17:23:52Z&se=2024-12-16T01:23:52Z&sv=2022-11-02&sr=b&sig=Ag9MUboj6TXpdi3XXKu2vnkcRwwlQwEkjI%2BluVE7gYs%3D",
+      image: getAssetPath('/images/sunflower-oil.png'),
     },
     {
       title: "Соево масло",
@@ -32,7 +32,7 @@ export default function Services() {
         "Бързи доставки",
       ],
       icon: ShieldCheckIcon,
-      image: "/images/soybean-oil-bg.jpg",
+      image: getAssetPath('/images/soybean-oil-bg.jpg'),
     },
   ];
 

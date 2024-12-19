@@ -118,7 +118,7 @@
   }
 
   .grain-overlay {
-    @apply absolute inset-0 bg-[url('https://snapstackstorageaccount.blob.core.windows.net/templates/grain-texture.png?sp=r&st=2024-12-15T17:21:52Z&se=2024-12-16T01:21:52Z&sv=2022-11-02&sr=b&sig=ci7LdF9dHKdUQTQGiKCqQfyhh6iIoAtqSJsNtHAy0Pk%3D')] 
+    @apply absolute inset-0 bg-[url('/global-trade/images/grain-texture.png')] 
            opacity-20 mix-blend-overlay pointer-events-none;
   }
 
