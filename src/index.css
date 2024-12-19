@@ -144,3 +144,25 @@
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-sunflower-500 to-leaf-500;
 }
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 20px 20px;
+    background-image: 
+      linear-gradient(to right, rgba(242, 183, 5, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(242, 183, 5, 0.1) 1px, transparent 1px);
+  }
+
+  .animate-float-slow {
+    animation: float-slow 20s linear infinite;
+  }
+
+  @keyframes float-slow {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-20px, -20px);
+    }
+  }
+}

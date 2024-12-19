@@ -108,8 +108,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Hero Section - Updated to accommodate navbar */}
+      <section className="relative min-h-[100vh] flex items-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
@@ -117,11 +117,11 @@ export default function Home() {
             alt="Sunflower field"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/70 to-transparent" />
         </div>
 
-        {/* Content Container */}
-        <div className="container relative z-10 mx-auto px-4">
+        {/* Content Container - Adjusted padding */}
+        <div className="container relative z-10 mx-auto px-4 pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
