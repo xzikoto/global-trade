@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   PhoneIcon,
   EnvelopeIcon,
@@ -7,6 +8,27 @@ import {
 } from "@heroicons/react/24/outline";
 
 export function Footer() {
+  const { t, i18n } = useTranslation();
+
+  // Create links after getting current language
+  const getNavigationLinks = () => [
+    { name: t('footer.navigation.home'), path: "/" },
+    { name: t('footer.navigation.about'), path: "/about" },
+    { name: t('footer.navigation.services'), path: "/services" },
+    { name: t('footer.navigation.contact'), path: "/contact" },
+  ];
+
+  // Create contact info after getting current language
+  const getContactInfo = () => [
+    { icon: PhoneIcon, text: t('footer.contact.phone') },
+    { icon: EnvelopeIcon, text: t('footer.contact.email') },
+    { icon: MapPinIcon, text: t('footer.contact.address') },
+  ];
+
+  // Get fresh data whenever language changes
+  const navigationLinks = getNavigationLinks();
+  const contactInfo = getContactInfo();
+
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-sunflower-50/30">
       <div className="absolute inset-0">
@@ -25,10 +47,7 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <Link
-                to="/home"
-                className="relative group flex items-center space-x-2"
-              >
+              <Link to="/home" className="relative group flex items-center space-x-2">
                 <div
                   className="w-10 h-10 bg-gradient-to-br from-sunflower-400 to-sunflower-500 rounded-lg flex items-center justify-center
                             transform group-hover:rotate-12 transition-all duration-300
@@ -37,21 +56,16 @@ export function Footer() {
                   <span className="text-white text-xl font-bold">GTI</span>
                 </div>
                 <div className="flex flex-col">
-                  <span
-                    className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent
-                               group-hover:from-sunflower-600 group-hover:to-sunflower-400 transition-all duration-300"
-                  >
-                    Global Trade International
+                  <span className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent group-hover:from-sunflower-600 group-hover:to-sunflower-400 transition-all duration-300">
+                    {t('footer.company.name')}
                   </span>
                   <span className="text-sm text-gray-500 group-hover:text-sunflower-400 transition-colors duration-300">
-                    2002 Ltd
+                    {t('footer.company.subtitle')}
                   </span>
                 </div>
               </Link>
             </div>
-            <p className="text-gray-600">
-              Качествени масла за световните пазари
-            </p>
+            <p className="text-gray-600">{t('footer.company.description')}</p>
           </motion.div>
 
           {/* Quick Links */}
@@ -60,14 +74,9 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="text-gray-900 font-bold mb-4">Навигация</h4>
+            <h4 className="text-gray-900 font-bold mb-4">{t('footer.navigation.title')}</h4>
             <div className="grid gap-2">
-              {[
-                { name: "Начало", path: "/" },
-                { name: "За нас", path: "/about" },
-                { name: "Услуги", path: "/services" },
-                { name: "Контакти", path: "/contact" },
-              ].map((item) => (
+              {navigationLinks.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -85,13 +94,9 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-gray-900 font-bold mb-4">Контакти</h4>
+            <h4 className="text-gray-900 font-bold mb-4">{t('footer.contact.title')}</h4>
             <div className="space-y-3">
-              {[
-                { icon: PhoneIcon, text: "+359 877 439 989" },
-                { icon: EnvelopeIcon, text: "info@globaltrade.com" },
-                { icon: MapPinIcon, text: "София, България" },
-              ].map((item, index) => (
+              {contactInfo.map((item, index) => (
                 <div
                   key={index}
                   className="flex items-center text-gray-600 hover:text-sunflower-500 transition-colors duration-300"
@@ -107,8 +112,8 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-sunflower-100/50 py-6 text-center text-gray-500 text-sm">
           <p>
-            © {new Date().getFullYear()} Global Trade International 2002 Ltd.
-            <br /> Всички права запазени.
+            © {new Date().getFullYear()} {t('footer.company.name')}.
+            <br /> {t('footer.copyright')}
           </p>
         </div>
       </div>

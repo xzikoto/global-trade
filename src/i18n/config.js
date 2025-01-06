@@ -7,6 +7,10 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "bg",
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+    },
     resources: {
       bg: {
         translation: {
@@ -263,6 +267,27 @@ i18n
             map: {
               title: "Къде да ни намерите"
             }
+          },
+          footer: {
+            company: {
+              name: "Global Trade International",
+              subtitle: "2002 Ltd",
+              description: "Качествени масла за световните пазари"
+            },
+            navigation: {
+              title: "Навигация",
+              home: "Начало",
+              about: "За нас",
+              services: "Услуги",
+              contact: "Контакти"
+            },
+            contact: {
+              title: "Контакти",
+              phone: "+359 877 439 989",
+              email: "info@globaltrade.com",
+              address: "София, България"
+            },
+            copyright: "Всички права запазени."
           }
         }
       },
@@ -525,6 +550,27 @@ i18n
             map: {
               title: "Де нас знайти"
             }
+          },
+          footer: {
+            company: {
+              name: "Global Trade International",
+              subtitle: "2002 Ltd",
+              description: "Якісні олії для світових ринків"
+            },
+            navigation: {
+              title: "Навігація",
+              home: "Головна",
+              about: "Про нас",
+              services: "Послуги",
+              contact: "Контакти"
+            },
+            contact: {
+              title: "Контакти",
+              phone: "+359 877 439 989",
+              email: "info@globaltrade.com",
+              address: "Софія, Болгарія"
+            },
+            copyright: "Всі права захищені."
           }
         }
       },
@@ -787,6 +833,27 @@ i18n
             map: {
               title: "Где нас найти"
             }
+          },
+          footer: {
+            company: {
+              name: "Global Trade International",
+              subtitle: "2002 Ltd",
+              description: "Качественные масла для мировых рынков"
+            },
+            navigation: {
+              title: "Навигация",
+              home: "Главная",
+              about: "О нас",
+              services: "Услуги",
+              contact: "Контакты"
+            },
+            contact: {
+              title: "Контакты",
+              phone: "+359 877 439 989",
+              email: "info@globaltrade.com",
+              address: "София, Болгария"
+            },
+            copyright: "Все права защищены."
           }
         }
       },
@@ -1041,9 +1108,36 @@ i18n
             map: {
               title: "Where to Find Us"
             }
+          },
+          footer: {
+            company: {
+              name: "Global Trade International",
+              subtitle: "2002 Ltd",
+              description: "Quality oils for global markets"
+            },
+            navigation: {
+              title: "Navigation",
+              home: "Home",
+              about: "About",
+              services: "Services",
+              contact: "Contact"
+            },
+            contact: {
+              title: "Contact",
+              phone: "+359 877 439 989",
+              email: "info@globaltrade.com",
+              address: "Sofia, Bulgaria"
+            },
+            copyright: "All rights reserved."
           }
         }
       },
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
     },
   });
 
