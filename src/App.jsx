@@ -2,9 +2,9 @@ import { BrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { AppRoutes } from "./routes";
+import './utils/emailjs';
 
-// Add this constant at the top of the file
-const baseUrl = import.meta.env.BASE_URL || '/';
+const baseUrl = import.meta.env.BASE_URL || "/";
 
 function App() {
   return (

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   BeakerIcon,
   TruckIcon,
@@ -7,34 +8,9 @@ import {
 import { getAssetPath } from '../utils/assetHelper';
 
 export default function Services() {
-  const services = [
-    {
-      title: "Слънчогледово масло",
-      description:
-        "Внос и износ на рафинирано и нерафинирано слънчогледово масло с най-високо качество.",
-      features: [
-        "Рафинирано и нерафинирано",
-        "Bulk опаковки",
-        "Сертифицирано качество",
-        "Конкурентни цени",
-      ],
-      icon: BeakerIcon,
-      image: getAssetPath('/images/sunflower-oil.png'),
-    },
-    {
-      title: "Соево масло",
-      description:
-        "Търговия с висококачествено соево масло за хранителната индустрия.",
-      features: [
-        "Индустриални доставки",
-        "Гарантиран произход",
-        "Лабораторно тествано",
-        "Бързи доставки",
-      ],
-      icon: ShieldCheckIcon,
-      image: getAssetPath('/images/soybean-oil-bg.jpg'),
-    },
-  ];
+  const { t } = useTranslation();
+
+  const services = t('services.products', { returnObjects: true });
 
   return (
     <div className="min-h-screen">
@@ -50,13 +26,13 @@ export default function Services() {
           >
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-sunflower-100 text-sunflower-600 font-medium mb-4">
               <TruckIcon className="w-5 h-5 mr-2" />
-              Нашите услуги
+              {t('services.hero.subtitle')}
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Качествени решения за вашия бизнес
+              {t('services.hero.title')}
             </h1>
             <p className="text-gray-600 text-lg">
-              Предлагаме широка гама от услуги в търговията с масла
+              {t('services.hero.description')}
             </p>
           </motion.div>
 
@@ -84,7 +60,7 @@ export default function Services() {
                                   rounded-2xl p-4 mb-6 transform group-hover:scale-110 
                                   group-hover:rotate-3 transition-all duration-300"
                     >
-                      <service.icon className="w-full h-full" />
+                      {index === 0 ? <BeakerIcon className="w-full h-full" /> : <ShieldCheckIcon className="w-full h-full" />}
                     </div>
 
                     <h3 className="text-2xl font-bold mb-4">{service.title}</h3>

@@ -22,7 +22,7 @@ import {
   RefinedOilIcon,
   QualityIcon,
 } from "../components/shared/icons/AgricultureIcons";
-import { getAssetPath } from '../utils/assetHelper';
+import { getAssetPath } from "../utils/assetHelper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -34,76 +34,81 @@ export default function Home() {
   const features = [
     {
       icon: BeakerIcon,
-      title: "Лабораторен контрол",
-      description: "Стриктен качествен контрол на всяка партида",
+      title: t('home.features.items.lab.title'),
+      description: t('home.features.items.lab.description'),
       bgColor: "bg-sunflower-50",
       iconColor: "text-sunflower-600",
       borderColor: "border-sunflower-200",
     },
     {
       icon: GlobeAltIcon,
-      title: "Международен обхват",
-      description: "Доставки в над 50 държави по света",
+      title: t('home.features.items.global.title'),
+      description: t('home.features.items.global.description'),
       bgColor: "bg-leaf-50",
       iconColor: "text-leaf-600",
       borderColor: "border-leaf-200",
     },
     {
       icon: ShieldCheckIcon,
-      title: "Гарантирано качество",
-      description: "Сертифицирани по ISO и HACCP стандарти",
+      title: t('home.features.items.quality.title'),
+      description: t('home.features.items.quality.description'),
       bgColor: "bg-earth-50",
       iconColor: "text-earth-600",
       borderColor: "border-earth-200",
     },
     {
       icon: TruckIcon,
-      title: "Бърза доставка",
-      description: "Експресни доставки до всяка точка",
+      title: t('home.features.items.delivery.title'),
+      description: t('home.features.items.delivery.description'),
       bgColor: "bg-sunflower-50",
       iconColor: "text-sunflower-600",
       borderColor: "border-sunflower-200",
     },
     {
       icon: CubeTransparentIcon,
-      title: "Прозрачност",
-      description: "Пълна проследимост на продукцията",
+      title: t('home.features.items.transparency.title'),
+      description: t('home.features.items.transparency.description'),
       bgColor: "bg-leaf-50",
       iconColor: "text-leaf-600",
       borderColor: "border-leaf-200",
     },
     {
       icon: SparklesIcon,
-      title: "Иновации",
-      description: "Модерни технологии за производство",
+      title: t('home.features.items.innovation.title'),
+      description: t('home.features.items.innovation.description'),
       bgColor: "bg-earth-50",
       iconColor: "text-earth-600",
       borderColor: "border-earth-200",
     },
   ];
 
-  const testimonials = [
+  const testimonials = t('home.testimonials.items', { returnObjects: true });
+
+  const stats = [
     {
-      text: "Отлично качество и професионално обслужване!",
-      author: "Вальо Стоянов",
-      position: "Управител, Food Industries Ltd.",
-      image:
-        "https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-1/146007501_4972410256133586_158430127861237987_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=4yDWgqurDm0Q7kNvgEcElEH&_nc_zt=24&_nc_ht=scontent.fsof11-1.fna&_nc_gid=A74pug01apVcqgb9HIonXmw&oh=00_AYDoQjFmgra6kOJEHxRNwicWTk4T0nyX3abq9_gpUxr31w&oe=677FD387",
+      icon: ClockIcon,
+      number: t('home.stats.metrics.numbers.tons'),
+      label: t('home.stats.metrics.tons'),
+      color: "sunflower",
     },
     {
-      text: "Надежден партньор с коректно отношение!",
-      author: "Ивайло Граматиков",
-      position: "Директор, Global Foods Ltd.",
-      image:
-        "https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-1/398650430_1263975971227011_6771802522397728138_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=27ciaeP_3fAQ7kNvgFHCDK2&_nc_zt=24&_nc_ht=scontent.fsof8-1.fna&_nc_gid=ACs9fUYCw2mkG0yz8Hkl2gq&oh=00_AYDnwfMAByKpewopgPTMix8n8jBQSh0jNR7dmwHrGsH3iA&oe=675E458D",
+      icon: UserGroupIcon,
+      number: t('home.stats.metrics.numbers.clients'),
+      label: t('home.stats.metrics.clients'),
+      color: "leaf",
     },
     {
-      text: "Винаги навременни доставки и отлично качество!",
-      author: "Данил Желязков",
-      position: "Собственик, Euro Trading Ltd.",
-      image:
-        "https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-1/174099052_4083884771732851_3742402510728688073_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=84E3F2DK5TYQ7kNvgEWv9QF&_nc_zt=24&_nc_ht=scontent.fsof11-1.fna&_nc_gid=ArzrM_kARm8tbwFk05oD9_0&oh=00_AYBuUjnOWCJ-s4in1nnIl926IJAoiwkAr3LT9VAgs_XhAA&oe=677FD8C6",
+      icon: GlobeAltIcon,
+      number: t('home.stats.metrics.numbers.countries'),
+      label: t('home.stats.metrics.countries'),
+      color: "earth",
     },
+    {
+      icon: ScaleIcon,
+      number: t('home.stats.metrics.numbers.quality'),
+      label: t('home.stats.metrics.quality'),
+      color: "sunflower",
+    }
   ];
 
   return (
@@ -113,7 +118,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src={getAssetPath('/images/hero-bg.jpg')}
+            src={getAssetPath("/images/hero-bg.jpg")}
             alt="Sunflower field"
             className="w-full h-full object-cover object-center"
           />
@@ -139,7 +144,7 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 className="block mb-2 relative"
               >
-                Качествени едрови масла
+                {t('home.hero.title')}
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -147,7 +152,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className="text-sunflower-400"
               >
-                за световните пазари
+                {t('home.hero.subtitle')}
               </motion.span>
             </h1>
 
@@ -158,8 +163,7 @@ export default function Home() {
               transition={{ delay: 0.7 }}
               className="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-xl"
             >
-              Вашият надежден партньор в търговията със слънчогледово и соево
-              масло
+              {t('home.hero.description')}
             </motion.p>
 
             {/* CTA Buttons */}
@@ -175,7 +179,7 @@ export default function Home() {
                          text-black font-semibold rounded-lg transform hover:scale-105 
                          transition-all duration-300 shadow-lg hover:shadow-sunflower-500/25"
               >
-                Свържете се с нас
+                {t('home.hero.cta.contact')}
               </a>
               <a
                 href="/services"
@@ -184,7 +188,7 @@ export default function Home() {
                          border-white/30 transform hover:scale-105 
                          transition-all duration-300"
               >
-                Научете повече
+                {t('home.hero.cta.learnMore')}
               </a>
             </motion.div>
 
@@ -196,9 +200,9 @@ export default function Home() {
               className="flex items-center space-x-6 pt-8"
             >
               {[
-                { number: "15+", label: "години опит" },
-                { number: "50+", label: "държави" },
-                { number: "1000+", label: "клиента" },
+                { number: "10 000+", label: t('home.hero.stats.tons') },
+                { number: "25+", label: t('home.hero.stats.countries') },
+                { number: "100+", label: t('home.hero.stats.clients') },
               ].map((stat, index) => (
                 <div key={index} className="text-white/90">
                   <div className="text-2xl font-bold text-sunflower-400">
@@ -235,45 +239,16 @@ export default function Home() {
           >
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-sunflower-100 text-sunflower-600 font-medium mb-4">
               <ChartBarIcon className="w-5 h-5 mr-2" />
-              Нашите постижения
+              {t('home.stats.subtitle')}
             </span>
-            <h2 className="text-4xl font-bold mb-6 text-gradient">В цифри</h2>
+            <h2 className="text-4xl font-bold mb-6 text-gradient">{t('home.stats.title')}</h2>
             <p className="text-gray-600 text-lg">
-              Години на усърдна работа, доверие и постоянно развитие
+              {t('home.stats.description')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: ClockIcon,
-                number: "15+",
-                label: "Години опит",
-                color: "sunflower",
-                suffix: "години",
-              },
-              {
-                icon: UserGroupIcon,
-                number: "1000+",
-                label: "Доволни клиенти",
-                color: "leaf",
-                suffix: "клиента",
-              },
-              {
-                icon: GlobeAltIcon,
-                number: "50+",
-                label: "Държави",
-                color: "earth",
-                suffix: "страни",
-              },
-              {
-                icon: ScaleIcon,
-                number: "100K+",
-                label: "Тона внос/износ",
-                color: "sunflower",
-                suffix: "тона",
-              },
-            ].map((stat, index) => (
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -347,14 +322,13 @@ export default function Home() {
           >
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-sunflower-100 text-sunflower-600 font-medium mb-4">
               <SparklesIcon className="w-5 h-5 mr-2" />
-              Нашите предимства
+              {t('home.features.subtitle')}
             </span>
             <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Защо да изберете нас?
+              {t('home.features.title')}
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              С дългогодишен опит и иновативен подход, ние сме вашият надежден
-              партньор в търговията с качествени масла
+              {t('home.features.description')}
             </p>
           </motion.div>
 
@@ -408,10 +382,10 @@ export default function Home() {
         <div className="container py-20">
           <h2 className="text-4xl font-bold text-center mb-16 relative">
             <span className="relative inline-block">
-              Нашите продукти
+              {t('home.products.title')}
               <div className="absolute -top-8 -right-8 w-16 h-16 animate-spin-slow opacity-20">
                 <img
-                  src={getAssetPath('/images/sunflower-oil.png')}
+                  src={getAssetPath("/images/sunflower-oil.png")}
                   alt=""
                   className="w-full h-full object-contain"
                 />
@@ -422,20 +396,16 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 relative">
             {[
               {
-                title: "Слънчогледово масло",
-                description: "Рафинирано и нерафинирано",
-                features: ["Висока чистота", "Златист цвят", "Приятен аромат"],
+                title: t('home.products.sunflower.title'),
+                description: t('home.products.sunflower.description'),
+                features: t('home.products.sunflower.features', { returnObjects: true }),
                 icon: "/images/sunflower-oil.png", // simplified path
                 gradient: "from-sunflower-light to-sunflower-dark",
               },
               {
-                title: "Соево масло",
-                description: "Първокласно качество",
-                features: [
-                  "Богато на протеини",
-                  "Светъл цвят",
-                  "Неутрален вкус",
-                ],
+                title: t('home.products.soy.title'),
+                description: t('home.products.soy.description'),
+                features: t('home.products.soy.features', { returnObjects: true }),
                 icon: "/images/soy-oil.png", // simplified path
                 gradient: "from-leaf-100 to-leaf-300",
               },
@@ -499,7 +469,7 @@ export default function Home() {
       {/* Add floating images */}
       <div className="absolute -right-20 top-20 w-64 h-64 animate-float-smooth opacity-20">
         <img
-          src={getAssetPath('/images/oil-drop.png')}
+          src={getAssetPath("/images/oil-drop.png")}
           alt="Oil drop"
           className="w-full h-full object-contain"
         />
@@ -509,7 +479,7 @@ export default function Home() {
         style={{ animationDelay: "1s" }}
       >
         <img
-          src={getAssetPath('/images/sunflower.png')}
+          src={getAssetPath("/images/sunflower.png")}
           alt="Sunflower"
           className="w-full h-full object-contain"
         />
@@ -519,7 +489,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={getAssetPath('/images/cta-bg.jpg')}
+            src={getAssetPath("/images/cta-bg.jpg")}
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -532,7 +502,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl font-bold text-center mb-16 text-white"
           >
-            Какво казват нашите клиенти
+            {t('home.testimonials.title')}
           </motion.h2>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}

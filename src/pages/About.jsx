@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   BeakerIcon,
   GlobeAltIcon,
@@ -10,55 +11,34 @@ import {
 import { getAssetPath } from "../utils/assetHelper";
 
 export default function About() {
-  const timeline = [
-    {
-      year: "2008",
-      title: "Основаване",
-      description: "Компанията е основана с фокус върху търговия с масла",
-    },
-    {
-      year: "2012",
-      title: "Международно разрастване",
-      description: "Започване на операции в повече от 20 държави",
-    },
-    {
-      year: "2015",
-      title: "ISO Сертификация",
-      description: "Получаване на ISO 9001:2015 сертификация",
-    },
-    {
-      year: "2020",
-      title: "Дигитална трансформация",
-      description: "Въвеждане на модерни технологии в процесите",
-    },
-  ];
+  const { t } = useTranslation();
 
   const values = [
     {
       icon: BeakerIcon,
-      title: "Качество",
-      description: "Най-високи стандарти във всеки аспект",
+      title: t('about.values.items.0.title'),
+      description: t('about.values.items.0.description'),
     },
     {
       icon: GlobeAltIcon,
-      title: "Глобален обхват",
-      description: "Присъствие на международните пазари",
+      title: t('about.values.items.1.title'),
+      description: t('about.values.items.1.description'),
     },
     {
       icon: UserGroupIcon,
-      title: "Партньорство",
-      description: "Изграждане на дълготрайни отношения",
+      title: t('about.values.items.2.title'),
+      description: t('about.values.items.2.description'),
     },
     {
       icon: SparklesIcon,
-      title: "Иновации",
-      description: "Постоянно развитие и подобрение",
+      title: t('about.values.items.3.title'),
+      description: t('about.values.items.3.description'),
     },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Updated to accommodate navbar */}
+      {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center">
         <div className="absolute inset-0">
           <img
@@ -77,10 +57,11 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl text-white"
           >
-            <h1 className="text-5xl font-bold mb-6">За GlobalTrade</h1>
+            <h1 className="text-5xl font-bold mb-6">
+              {t('about.hero.title')}
+            </h1>
             <p className="text-xl text-white/90">
-              Повече от 15 години доставяме качествени масла на световните
-              пазари, изграждайки доверие и партньорства.
+              {t('about.hero.description')}
             </p>
           </motion.div>
         </div>
@@ -95,23 +76,88 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold mb-6">Нашата история</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('about.overview.title')}</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                GlobalTrade основана през 2008 година с мисията да предоставя
-                висококачествени хранителни масла на международните пазари. Днес
-                сме горди да бъдем един от водещите доставчици в индустрията,
-                обслужващ клиенти в над 50 държави.
+                {t('about.overview.description')}
               </p>
               <div className="grid grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-xl shadow-md">
-                  <BuildingOfficeIcon className="w-12 h-12 text-sunflower-500 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Централен офис</h3>
-                  <p className="text-gray-600">София, България</p>
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group">
+                  <BuildingOfficeIcon className="w-12 h-12 text-sunflower-500 mb-4 transform group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-xl font-semibold mb-4">{t('about.overview.headquarters.title')}</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 group/item transition-all duration-300 hover:translate-x-1">
+                      <span className="w-2 h-2 rounded-full bg-sunflower-400 group-hover/item:scale-150 transition-transform duration-300" />
+                      <p className="text-gray-700">
+                        <span className="font-medium">{t('about.overview.headquarters.country')}</span>
+                        <span className="block text-sm text-gray-500">
+                          {t('about.overview.headquarters.countryDesc')}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3 group/item transition-all duration-300 hover:translate-x-1">
+                      <span className="w-2 h-2 rounded-full bg-sunflower-400 group-hover/item:scale-150 transition-transform duration-300" />
+                      <p className="text-gray-700">
+                        <span className="font-medium">{t('about.overview.headquarters.city')}</span>
+                        <span className="block text-sm text-gray-500">
+                          {t('about.overview.headquarters.cityDesc')}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3 group/item transition-all duration-300 hover:translate-x-1">
+                      <span className="w-2 h-2 rounded-full bg-sunflower-400 group-hover/item:scale-150 transition-transform duration-300" />
+                      <p className="text-gray-700">
+                        <span className="font-medium">{t('about.overview.headquarters.address')}</span>
+                        <span className="block text-sm text-gray-500">
+                          {t('about.overview.headquarters.addressDesc')}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <span className="inline-flex items-center text-sm text-sunflower-600 font-medium">
+                      <span className="mr-2">📍</span>
+                      {t('about.overview.headquarters.floor')}
+                    </span>
+                  </div>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-md">
-                  <TrophyIcon className="w-12 h-12 text-sunflower-500 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Признания</h3>
-                  <p className="text-gray-600">ISO 9001:2015</p>
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group">
+                  <TrophyIcon className="w-12 h-12 text-sunflower-500 mb-4 transform group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-xl font-semibold mb-4">{t('about.overview.advantages.title')}</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 group/item transition-all duration-300 hover:translate-x-1">
+                      <span className="w-2 h-2 rounded-full bg-sunflower-400 group-hover/item:scale-150 transition-transform duration-300" />
+                      <p className="text-gray-700">
+                        <span className="font-medium">{t('about.overview.advantages.quality.title')}</span>
+                        <span className="block text-sm text-gray-500">
+                          {t('about.overview.advantages.quality.desc')}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3 group/item transition-all duration-300 hover:translate-x-1">
+                      <span className="w-2 h-2 rounded-full bg-sunflower-400 group-hover/item:scale-150 transition-transform duration-300" />
+                      <p className="text-gray-700">
+                        <span className="font-medium">{t('about.overview.advantages.delivery.title')}</span>
+                        <span className="block text-sm text-gray-500">
+                          {t('about.overview.advantages.delivery.desc')}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3 group/item transition-all duration-300 hover:translate-x-1">
+                      <span className="w-2 h-2 rounded-full bg-sunflower-400 group-hover/item:scale-150 transition-transform duration-300" />
+                      <p className="text-gray-700">
+                        <span className="font-medium">{t('about.overview.advantages.consultation.title')}</span>
+                        <span className="block text-sm text-gray-500">
+                          {t('about.overview.advantages.consultation.desc')}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <span className="inline-flex items-center text-sm text-sunflower-600 font-medium">
+                      <span className="mr-2">✓</span>
+                      {t('about.overview.advantages.guarantee')}
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -128,146 +174,8 @@ export default function About() {
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl">
-                <p className="text-4xl font-bold text-sunflower-500">15+</p>
-                <p className="text-gray-600">години опит</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section - Enhanced */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Timeline Content */}
-            <div>
-              <h2 className="text-3xl font-bold mb-16">Нашият път</h2>
-              <div className="space-y-12">
-                {timeline.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                    className="relative pl-8 border-l-2 border-sunflower-200"
-                  >
-                    <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-sunflower-500 shadow-lg shadow-sunflower-500/30">
-                      <div className="absolute inset-1 rounded-full bg-white" />
-                    </div>
-                    <div className="text-xl font-bold text-sunflower-500 mb-2">
-                      {item.year}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Visual Timeline Companion */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative hidden lg:block"
-            >
-              <div className="glass-card p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-sunflower-100/30 rounded-full blur-3xl -z-10" />
-
-                {/* Achievement Stats */}
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  {[
-                    { number: "15+", label: "Години опит" },
-                    { number: "50+", label: "Държави" },
-                    { number: "1000+", label: "Клиенти" },
-                    { number: "100K+", label: "Тона внос/износ" },
-                  ].map((stat, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="text-center p-4 bg-white/50 rounded-xl backdrop-blur-sm"
-                    >
-                      <div className="text-2xl font-bold text-sunflower-500">
-                        {stat.number}
-                      </div>
-                      <div className="text-sm text-gray-600">{stat.label}</div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Journey Visualization */}
-                <div className="relative h-60 mt-8">
-                  <div className="absolute inset-0 bg-gradient-to-br from-sunflower-50 via-white to-sunflower-100/30 rounded-xl overflow-hidden">
-                    {/* Animated background patterns */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern animate-float-slow" />
-                    </div>
-                    
-                    {/* Decorative circles */}
-                    <motion.div 
-                      className="absolute -right-16 -top-16 w-64 h-64 bg-sunflower-200/30 rounded-full blur-3xl"
-                      animate={{ scale: [1, 1.2, 1], rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    />
-                    <motion.div 
-                      className="absolute -left-16 -bottom-16 w-64 h-64 bg-sunflower-300/20 rounded-full blur-3xl"
-                      animate={{ scale: [1.2, 1, 1.2], rotate: -360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    />
-
-                    {/* Sunflower icons */}
-                    <div className="absolute top-4 right-4 w-8 h-8 text-sunflower-400 opacity-20">
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                      >
-                        🌻
-                      </motion.div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 w-8 h-8 text-sunflower-400 opacity-20">
-                      <motion.div
-                        animate={{ rotate: -360 }}
-                        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                      >
-                        🌻
-                      </motion.div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="absolute inset-0 flex items-center justify-center backdrop-blur-sm">
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="text-center z-10 px-8 py-6 bg-white/50 rounded-2xl backdrop-blur-md 
-                                    border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300"
-                      >
-                        <motion.div
-                          animate={{ y: [0, -8, 0] }}
-                          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                          <h3 className="text-3xl font-bold bg-gradient-to-r from-sunflower-600 to-sunflower-400 
-                                        bg-clip-text text-transparent mb-3">
-                            GlobalTrade
-                          </h3>
-                          <div className="text-gray-600 relative">
-                            <span className="relative">
-                              Световен лидер в търговията с масла
-                              <motion.div
-                                className="absolute -bottom-1 left-0 w-full h-0.5 bg-sunflower-400/50"
-                                initial={{ scaleX: 0 }}
-                                whileInView={{ scaleX: 1 }}
-                                transition={{ delay: 0.5, duration: 0.8 }}
-                              />
-                            </span>
-                          </div>
-                        </motion.div>
-                      </motion.div>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-4xl font-bold text-sunflower-500">2+</p>
+                <p className="text-gray-600">{t('about.overview.experience')}</p>
               </div>
             </motion.div>
           </div>
@@ -278,7 +186,7 @@ export default function About() {
       <section className="py-24">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-16">
-            Нашите ценности
+            {t('about.values.title')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (

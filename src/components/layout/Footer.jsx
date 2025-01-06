@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 export function Footer() {
   return (
@@ -21,10 +25,29 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-sunflower-500 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-black text-xl font-bold">GT</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">GlobalTrade</span>
+              <Link
+                to="/home"
+                className="relative group flex items-center space-x-2"
+              >
+                <div
+                  className="w-10 h-10 bg-gradient-to-br from-sunflower-400 to-sunflower-500 rounded-lg flex items-center justify-center
+                            transform group-hover:rotate-12 transition-all duration-300
+                            shadow-lg shadow-sunflower-500/30 hover:shadow-sunflower-500/50"
+                >
+                  <span className="text-white text-xl font-bold">GTI</span>
+                </div>
+                <div className="flex flex-col">
+                  <span
+                    className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent
+                               group-hover:from-sunflower-600 group-hover:to-sunflower-400 transition-all duration-300"
+                  >
+                    Global Trade International
+                  </span>
+                  <span className="text-sm text-gray-500 group-hover:text-sunflower-400 transition-colors duration-300">
+                    2002 Ltd
+                  </span>
+                </div>
+              </Link>
             </div>
             <p className="text-gray-600">
               Качествени масла за световните пазари
@@ -65,11 +88,14 @@ export function Footer() {
             <h4 className="text-gray-900 font-bold mb-4">Контакти</h4>
             <div className="space-y-3">
               {[
-                { icon: PhoneIcon, text: "+359 888 123 456" },
+                { icon: PhoneIcon, text: "+359 877 439 989" },
                 { icon: EnvelopeIcon, text: "info@globaltrade.com" },
                 { icon: MapPinIcon, text: "София, България" },
               ].map((item, index) => (
-                <div key={index} className="flex items-center text-gray-600 hover:text-sunflower-500 transition-colors duration-300">
+                <div
+                  key={index}
+                  className="flex items-center text-gray-600 hover:text-sunflower-500 transition-colors duration-300"
+                >
                   <item.icon className="w-5 h-5 mr-3 text-sunflower-500" />
                   <span>{item.text}</span>
                 </div>
@@ -80,7 +106,10 @@ export function Footer() {
 
         {/* Footer Bottom */}
         <div className="border-t border-sunflower-100/50 py-6 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} GlobalTrade. Всички права запазени.</p>
+          <p>
+            © {new Date().getFullYear()} Global Trade International 2002 Ltd.
+            <br /> Всички права запазени.
+          </p>
         </div>
       </div>
     </footer>
