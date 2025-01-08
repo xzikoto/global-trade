@@ -4,9 +4,10 @@ import "./i18n/config";
 import "./index.css";
 import App from "./App.jsx";
 
-// ...existing code...
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-createRoot(document.getElementById("root")).render(
+root.render(
   <StrictMode>
     <App />
   </StrictMode>

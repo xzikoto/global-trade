@@ -23,6 +23,8 @@ export function Navbar() {
     { path: "/home", label: t("nav.home") },
     { path: "/about", label: t("nav.about") },
     { path: "/services", label: t("nav.services") },
+    { path: "/products", label: t("nav.products") },
+    { path: "/transport", label: t("nav.transport") },
     { path: "/contact", label: t("nav.contact") },
   ];
 

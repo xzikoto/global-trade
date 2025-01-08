@@ -27,15 +27,15 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_ry3hgx9",
+        "template_4jms8jk",
         {
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY"
+        "GZ42QS7grRkQVsCPj"
       );
 
       setSubmitStatus("success");
